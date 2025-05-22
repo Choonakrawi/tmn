@@ -1,9 +1,10 @@
 body {
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'System font', sans-serif;
   margin: 0;
   overflow: hidden;
 }
 .triggers {
+  letter-spacing: 4px;
   bottom: 20px;
   color: white;
   left: 50%;
@@ -28,3 +29,33 @@ body {
 .triggers span:hover {
   color: red;
 }
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+a:hover {
+  color: red;
+}
+a:visited {
+  color: white;
+}
+a:active {
+  color: red;
+}
+a:focus {
+  outline: none;
+}
+a:focus-visible {
+  outline: 2px solid red;
+}
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+a:focus-visible {
+  outline: 2px solid red;
+} 
