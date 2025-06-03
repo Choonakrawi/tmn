@@ -4,7 +4,53 @@ body {
   overflow: scroll;
   height: 100vh;
   background-color: black;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
+
+/* Responsive containers */
+.container, .wrapper, main, section {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* Responsive media */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent text overflow */
+p, pre, div {
+  max-width: 100%;
+  word-wrap: break-word;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .container, .row, .section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 10px;
+  }
+  nav, .nav-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  [style*="width"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
 .triggers {
   letter-spacing: 4px;
   color: white;
