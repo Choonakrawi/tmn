@@ -1,12 +1,10 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0; 
-  overflow: scroll;
   height: 100vh;
   background-color: black;
   overflow-x: hidden;
   box-sizing: border-box;
-  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -109,7 +107,6 @@ a:focus-visible {
 
 .content {
   margin: auto;
-  width: 80%;
   min-height: 100%;
   font-size: 12px;
   font-size-adjust: 0.5;
@@ -131,7 +128,7 @@ a:focus-visible {
 
   /* Accessibility considerations */
   text-align: left; /* Left-aligned text for natural reading */
-  max-width: 75ch; /* Optimal line length for readability (about 75 characters) */
+  /* max-width: 75ch; Optimal line length for readability (about 75 characters) */
   margin: 0 auto; /* Center the text block for better focus */
   padding: 2rem; /* Add padding for breathing room */
 
@@ -148,7 +145,6 @@ a:focus-visible {
 footer {
   position: relative;
   bottom: 0;
-  width: 100%;
   text-align: center;
   padding: 10px;
   color: white;
@@ -167,3 +163,56 @@ footer {
 .char {
   will-change: transform;
 }
+
+   .portfolio {
+            padding: 40px 0;
+            width: 70vw;
+            margin: 0 auto;
+        }
+        .portfolio h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .portfolio ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .portfolio li.card {
+          background: rgba(255, 255, 255, 0.1); /* Semi-transparent for glass effect */
+            backdrop-filter: blur(10px); /* Frosted glass blur */
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            border-radius: 12px;
+            width: 100%;
+            max-width: 450px; /* Max width for desktop */
+            min-width: 280px; /* Minimum width to prevent shrinking too much */
+            padding: 20px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+            color: #fff;
+        }
+        .portfolio li.card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .portfolio li.card h3 {
+            font-size: 1.5em;
+            margin: 0 0 10px;
+            color: #fff;
+        }
+        .portfolio li.card p {
+            font-size: 1em;
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+        /* Fallback for browsers without backdrop-filter support */
+        @supports not (backdrop-filter: blur(10px)) {
+            .portfolio li.card {
+                background: rgba(255, 255, 255, 0.3); /* Slightly more opaque fallback */
+            }
+        }
