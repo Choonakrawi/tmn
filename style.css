@@ -18,9 +18,9 @@ body {
 .triggers span {
   cursor: pointer;
   display: inline-block;
-  font-size: 14px;
-  margin: 0 20px;
-  padding: 2px 4px;
+  /* font-size: 14px; */
+  /* margin: 0 20px;
+  padding: 2px 4px; */
   transition: opacity 0.5s, color 0.5s;
 }
 .triggers span[data-disabled="true"] {
@@ -28,7 +28,7 @@ body {
   pointer-events: none;
 }
 .triggers span:hover {
-  color: red;
+  color: rgb(0, 0, 0);
 }
 
 a {
@@ -87,7 +87,7 @@ a:focus-visible {
   text-align: left; /* Left-aligned text for natural reading */
   max-width: 75ch; /* Optimal line length for readability (about 75 characters) */
   margin: 0 auto; /* Center the text block for better focus */
-  padding: 1rem; /* Add padding for breathing room */
+  padding: 2rem; /* Add padding for breathing room */
 
   /* Prevent text selection issues */
   user-select: text; /* Ensures text can be selected */
