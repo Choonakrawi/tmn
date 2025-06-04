@@ -184,7 +184,7 @@ footer {
             justify-content: center;
         }
         .portfolio li.card {
-          background: rgba(255, 255, 255, 0.1); /* Semi-transparent for glass effect */
+          background: rgba(57, 57, 57, 0.2); /* Semi-transparent for glass effect */
             backdrop-filter: blur(10px); /* Frosted glass blur */
             -webkit-backdrop-filter: blur(10px); /* Safari support */
             border-radius: 12px;
