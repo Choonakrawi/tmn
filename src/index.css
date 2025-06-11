@@ -1,0 +1,194 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #000000;
+    --foreground: #ffffff;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Ensure the particle background is visible */
+.particle-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Ensure content is above the particle background */
+main {
+  position: relative;
+  z-index: 1;
+}
+
+@layer components {
+  .container, .wrapper, main, section {
+    @apply w-full max-w-full px-4 box-border;
+  }
+
+  img, video, iframe {
+    @apply max-w-full h-auto block;
+  }
+
+  p, pre, div {
+    @apply max-w-full break-words;
+  }
+
+  .triggers {
+    @apply tracking-widest text-white left-1/2 absolute text-center transform -translate-x-1/2 w-full z-10;
+  }
+
+  .triggers span {
+    @apply cursor-pointer inline-block transition-opacity duration-500 transition-colors duration-500;
+  }
+
+  .triggers span[data-disabled="true"] {
+    @apply opacity-30 pointer-events-none;
+  }
+
+  .triggers span:hover {
+    @apply text-black;
+  }
+
+  a {
+    @apply text-white no-underline text-xs hover:text-red-500 visited:text-white active:text-red-500 focus:outline-none focus-visible:outline-2 focus-visible:outline-red-500;
+  }
+
+  .content {
+    @apply mx-auto min-h-full text-sm leading-relaxed tracking-wide text-left my-0 mx-auto p-8 select-text;
+    font-size-adjust: 0.5;
+    line-height: calc(1ex / 0.32);
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    white-space: normal;
+    text-rendering: optimizeLegibility;
+  }
+
+  footer {
+    @apply relative text-center p-2.5 text-white text-xs tracking-widest uppercase pb-8;
+  }
+
+  .menu {
+    @apply z-10 min-w-[100px] pt-8 tracking-widest;
+  }
+
+  .portfolio {
+    @apply py-10 w-[70vw] mx-auto;
+  }
+
+  .portfolio h2 {
+    @apply text-4xl mb-5 text-white text-center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .portfolio ul {
+    @apply list-none p-0 flex flex-wrap gap-5 justify-center;
+  }
+
+  .portfolio li.card {
+    @apply rounded-xl w-full max-w-[450px] min-w-[280px] p-5 text-left transition-all duration-300 text-white;
+    background: rgba(57, 57, 57, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+
+  .portfolio li.card:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
+  }
+
+  .portfolio li.card p {
+    @apply text-base text-white/90 m-0;
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .portfolio li.card {
+    @apply bg-white/30;
+  }
+}
+
+@media (max-width: 768px) {
+  .container, .row, .section {
+    @apply w-full max-w-full m-0 px-2.5;
+  }
+  
+  nav, .nav-menu {
+    @apply w-full flex flex-col;
+  }
+  
+  [style*="width"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
