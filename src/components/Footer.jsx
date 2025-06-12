@@ -8,10 +8,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center space-y-6">
           <Logo />
           <p className="text-sm text-muted-foreground font-light">New York | Stockholm</p>
-          <a
-            href="mailto:choonakrawi@gmail.com"
-            className="text-sm text-foreground font-light hover:text-muted-foreground transition-colors">Email us
-          </a>
+          <a href="mailto:hello@andmore.se" className="text-sm text-foreground font-light hover:text-muted-foreground transition-colors">Hello@andmore.se</a>
         </div>
       </div>
     </footer>
