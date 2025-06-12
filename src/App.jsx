@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ErrorBoundary from './components/ErrorBoundary'
 import Loading from './components/Loading'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 // Lazy load components
 const Hero = lazy(() => import('./components/Hero'))
@@ -29,6 +30,7 @@ function App() {
           <Footer />
         </div>
       </div>
+      <SpeedInsights />
     </ErrorBoundary>
   )
 }
