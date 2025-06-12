@@ -7,7 +7,9 @@ import { inject } from '@vercel/analytics'
 export default defineConfig({
   plugins: [
     react(),
-    inject()
+    inject({
+      mode: 'auto'
+    })
   ],
   resolve: {
     alias: {
