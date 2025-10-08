@@ -4,7 +4,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Global Collaboration",
-      description: "From NYC to Stockholm and beyond, we assemble tailored teams of creatives for each project, drawing from our growing network to match the right skills to the right challenge."
+      description: "From LA to Stockholm and beyond, we assemble tailored teams of creatives for each project, drawing from our growing network to match the right skills to the right challenge."
     },
     {
       title: "Flexible Approach",
@@ -31,7 +31,7 @@ const Portfolio = () => {
             </li>
           ))}
         </ul>
-        <p className="text-sm font-light text-white text-center mt-8 leading-relaxed">Ready to create something extraordinary? Let's connect and bring your vision to life.</p>
+        <p className="text-sm font-light text-white text-center mt-8 leading-relaxed">Let's connect and bring your vision to life.</p>
       </div>
       <style jsx>{`
         .portfolio {
