@@ -1,75 +1,34 @@
-/** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: ["class"],
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
-  theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
-    extend: {
-      // shadcn/ui color tokens
-      colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
-        },
-        secondary: {
-          DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))",
-        },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
-        },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
-        },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
-      },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-      },
-    },
-  },
-  plugins: [require("tailwindcss-animate")],
-};
+# andmore.se
+
+**www.andmore.se** is the digital home of **andmore** — a creative collective exploring the intersection of design, technology, and culture. Based in Stockholm, andmore brings together collaborators and projects that blur boundaries between disciplines.
+
+## 🌱 Vision
+
+andmore is built on the idea that creativity is a continual process — there is always more to learn, more to make, more to share.
+
+## ✨ Key Features
+
+- Responsive portfolio to showcase work, experiments, and collaborators
+- Modular design system for consistent visual language
+- Fast, lightweight frontend architecture
+- CMS-ready for future content management
+- Foundation for community features and long-term evolution
+
+## 🛠 Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org) / [React](https://react.dev)
+- **Styling:** Tailwind CSS
+- **Hosting:** Vercel (or specify alternative)
+- **Design:** Figma
+
+## 📁 Project Structure
+
+```bash
+.
+├── public/             # Static assets
+├── pages/              # App routes
+├── components/         # UI components
+├── styles/             # Global styles
+└── README.md
+├── content/            # Project writeups / media (if CMS-free)
+├── utils/              # Helper functions
