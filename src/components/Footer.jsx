@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center space-y-6">
           <Logo />
-          <p className="text-sm text-muted-foreground font-light">New York | Stockholm</p>
+          <p className="text-sm text-muted-foreground font-light">LA | NY | Stockholm</p>
           <div className="flex items-center space-x-4">
             <a href="mailto:hello@andmore.se" className="text-sm text-foreground font-light hover:text-muted-foreground transition-colors">Hello@andmore.se</a>
             <span className="text-muted-foreground">•</span>

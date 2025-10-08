@@ -5,7 +5,7 @@ export function HowWeWork() {
   const workItems = [
     {
       title: "Global Collaboration",
-      description: "From NYC to Stockholm and beyond, we assemble tailored teams of creatives for each project, drawing from our growing network to match the right skills to the right challenge."
+      description: "From LA to Stockholm and beyond, we assemble tailored teams of creatives for each project, drawing from our growing network to match the right skills to the right challenge."
     },
     {
       title: "Flexible Approach",
