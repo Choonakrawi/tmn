@@ -31,33 +31,31 @@ const ParticleBackground = () => {
     renderer.setClearColor(0x000000, 0);
     containerRef.current.appendChild(renderer.domElement);
     rendererRef.current = renderer;
-
+  
     // Particles setup
     const particlesGeometry = new THREE.BufferGeometry();
     const particleCount = 1000;
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
-
     for (let i = 0; i < particleCount * 3; i += 3) {
       positions[i] = (Math.random() - 0.5) * 10;
       positions[i + 1] = (Math.random() - 0.5) * 10;
       positions[i + 2] = (Math.random() - 0.5) * 10;
-
-      colors[i] = Math.random();
-      colors[i + 1] = Math.random();
-      colors[i + 2] = Math.random();
+      
+      // Grayscale: same value for R, G, B (ranging from light to dark)
+      const grayValue = Math.random();
+      colors[i] = grayValue;
+      colors[i + 1] = grayValue;
+      colors[i + 2] = grayValue;
     }
-
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     particlesGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
-
     const particlesMaterial = new THREE.PointsMaterial({
       size: 0.05,
       vertexColors: true,
       transparent: true,
       opacity: 0.8
     });
-
     const particles = new THREE.Points(particlesGeometry, particlesMaterial);
     scene.add(particles);
     particlesRef.current = particles;
